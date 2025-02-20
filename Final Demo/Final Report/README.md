@@ -61,11 +61,7 @@ mv multiply tests/
 ```sh
 ./build/X86/gem5.opt --l3cache --l3_size=1MB --l3_assoc=2
 ```
--以下為 2-way Cache 下的 L3 Miss Rate：
-（請填入觀察到的數據）
-
--程式執行時的過程：
-（請填入執行過程的輸出內容）
+-觀察 2-way Cache 下的 L3 Miss Rate：
 
 ### **測試 Fully Associative**
 在 benchmark 中設置 L3 Size = 1MB，
@@ -75,10 +71,8 @@ mv multiply tests/
 ```sh
 ./build/X86/gem5.opt --l3cache --l3_size=1MB --l3_assoc=16384
 ```
--以下為 Fully Associative Cache 下的 L3 Miss Rate：Miss Rate 反而 上升 了。
-（請填入觀察到的數據）
+- Fully Associative Cache 下的 L3 Miss Rate：Miss Rate 反而 上升 了。
 
--程式執行時的過程：
 
 ---
 
@@ -102,9 +96,7 @@ scons build/X86/gem5.opt -j$(nproc)
 
 ### **4️⃣ 測試 RRIP 效果**
 -以下為 RRIP 實作後的結果：
-相較於 LRU，Miss Rate 有所下降：
-
-（請填入觀察到的數據）
+相較於 LRU，Miss Rate 有所下降
 
 -Miss Rate 約下降 0.01%，與 2-way LRU 相比有所改善。
 
@@ -120,8 +112,4 @@ scons build/X86/gem5.opt -j$(nproc)
 ```
 
 ### **2️⃣ 觀察 L3 Cache Miss Rate**
--以下為 L3 Cache Miss Rate：
-（請填入觀察到的數據）
 
--以下為程式執行時的過程：
-（請填入執行過程的輸出內容）
